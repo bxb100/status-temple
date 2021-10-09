@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+.same-html {
+    background-color: #f6f9fc;
+}
+
+.padding-inner {
+    @apply p-8
+}
+
+div.block-chart {
+    @apply h-8 pt-2 pb-1 w-101/100;
+}
+div.block-chart div.bar {
+    @apply relative float-left h-full w-1.5 cursor-pointer border-l border-r border-white border-solid opacity-80 bg-green-600;
+}
+
+div.block-chart div.bar:hover {
+    opacity: 1;
+}
+
+div.block-chart div.bar.mid {
+    @apply bg-yellow-500;
+}
+
+div.block-chart div.bar.down {
+    @apply bg-red-500;
+}
+
+div.block-chart div.bar.pending {
+    background: #aab7c4;
+}
+
+div.block-chart div.bar:first-child {
+    border-left: 0;
+}
+div.block-chart div.bar:last-child {
+    border-right: 0;
+}
+
+.legend-item {
+    display: block;
+    float: left;
+    position: relative;
+    padding-left: 15px;
+}
+
+.legend-color {
+    display: block;
+    width: 9px;
+    height: 9px;
+    opacity: 0.8;
+
+    position: absolute;
+    left: 0;
+    top: 4px;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.legend-item label {
+    display: block;
+    font-size: 13px;
+    color: #8898aa;
+    margin-right: 20px;
+}
+
+.graph-up {
+    @apply fill-current bg-green-600;
+}
+
+.graph-mid {
+    @apply bg-yellow-500 fill-current;
+}
+
+.graph-down {
+    @apply bg-red-500 fill-current;
+}
+
+.tippy-content {
+    @apply text-center text-xs opacity-75 px-4 py-5;
+}
