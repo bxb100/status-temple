@@ -1,4 +1,4 @@
-import Bar from './bar';
+import Bar from './Bar';
 
 const BarChart = ({ uptimeSection }) => {
     const hidden = uptimeSection ? 'visible' : 'invisible';
