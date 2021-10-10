@@ -1,12 +1,12 @@
-import Bar from './Bar';
+import Bar from './BarItem';
 
 const BarChart = ({ uptimeSection }) => {
-    const hidden = uptimeSection ? 'visible' : 'invisible';
+    const visible = uptimeSection ? 'visible' : 'invisible';
     return (
         <div className='uptime-section'>
             <div className="block-header">
-                <span className={"text-black text-base pr-3 " + hidden}>{uptimeSection?.title}</span>
-                <span className={"text-gray-400 text-sm pl-3 float-right " + hidden}>{`${uptimeSection?.percentage}% uptime for the last 90 days`}</span>
+                <span className={"text-black text-base pr-3 " + visible}>{uptimeSection?.title}</span>
+                <span className={"text-gray-400 text-sm pl-3 float-right " + visible}>{`${uptimeSection?.percentage}% uptime for the last 90 days`}</span>
             </div>
             <div className="block-chart">
                 {Array(91)

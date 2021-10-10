@@ -8,22 +8,22 @@ html,
 }
 
 .uptime-section {
-    @apply mb-7
+    @apply mb-7;
 }
 
 .uptime-section:last-child {
-    @apply m-0
+    @apply m-0;
 }
 
 .padding-inner {
-    @apply p-8
+    @apply p-8;
 }
 
 div.block-chart {
     @apply h-8 pt-2 pb-1 w-101/100;
 }
 div.block-chart div.bar {
-    @apply relative float-left h-full w-1.5 cursor-pointer border-l border-r border-white border-solid opacity-80 bg-green-600;
+    @apply relative float-left h-full w-1.5 cursor-pointer border-l border-r border-white border-solid opacity-80 bg-green-400;
 }
 
 div.block-chart div.bar:hover {
@@ -43,36 +43,21 @@ div.block-chart div.bar.pending {
 }
 
 .legend-item {
-    display: block;
-    float: left;
-    position: relative;
-    padding-left: 15px;
+    @apply float-left block relative pl-4
 }
 
 .legend-color {
-    display: block;
-    width: 9px;
-    height: 9px;
-    opacity: 0.8;
-
-    position: absolute;
-    left: 0;
-    top: 4px;
-
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -o-border-radius: 2px;
+    top: 6px;
+    @apply block w-2 h-2 opacity-80 absolute left-0
 }
 
 .legend-item label {
-    display: block;
-    font-size: 13px;
     color: #8898aa;
-    margin-right: 20px;
+    @apply block text-sm mr-5
 }
 
 .graph-up {
-    @apply fill-current bg-green-600;
+    @apply fill-current bg-green-400;
 }
 
 .graph-mid {
