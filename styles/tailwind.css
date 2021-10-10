@@ -7,6 +7,14 @@ html,
     background-color: #f6f9fc;
 }
 
+.uptime-section {
+    @apply mb-7
+}
+
+.uptime-section:last-child {
+    @apply m-0
+}
+
 .padding-inner {
     @apply p-8
 }
