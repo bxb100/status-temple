@@ -1,5 +1,5 @@
 ## Desc
-This project look like https://status.stripe.com use react & tailwind css & next
+This project look like [stripe status](https://status.stripe.com) page, using react & tailwind css & next
 
 It's simple static front end page
 
