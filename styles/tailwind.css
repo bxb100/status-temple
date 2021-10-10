@@ -34,13 +34,6 @@ div.block-chart div.bar.pending {
     background: #aab7c4;
 }
 
-div.block-chart div.bar:first-child {
-    border-left: 0;
-}
-div.block-chart div.bar:last-child {
-    border-right: 0;
-}
-
 .legend-item {
     display: block;
     float: left;
