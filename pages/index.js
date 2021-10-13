@@ -32,10 +32,10 @@ export default function Home() {
                     <span className="absolute top-7 ml-2 text-indigo-700">system status</span>
                 </div>
             </div>
-            <div className="bg-white shadow bg-gray-50">
+            <div className="shadow-2xl bg-gray-50 rounded-md">
                 <BarBox uptimeData={jsonData.uptimeData} loading={loading} />
 
-                <div className="bg-gray-50 pt-5 pb-5 padding-inner" style={{ borderTop: '2px solid white' }}>
+                <div className="pt-5 pb-5 padding-inner" style={{ borderTop: '2px solid white' }}>
                     <span className="legend-item">
                         <span className="legend-color graph-up"></span>
                         <label>100% uptime</label>

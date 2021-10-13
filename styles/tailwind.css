@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    @apply overflow-hidden bg-gradient-to-r from-indigo-50 to-indigo-100
+body {
+    @apply overflow-hidden md:bg-gradient-to-r from-indigo-50 to-indigo-100 bg-indigo-50;
 }
 
 .uptime-section {
