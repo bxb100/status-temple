@@ -1,7 +1,7 @@
 import BarChart from './BarChart';
 
-const BarBox = ({ uptimeData }) => {
-    const hidden = uptimeData ? 'hidden' : '';
+const BarBox = ({ uptimeData, loading }) => {
+    const hidden = loading ? 'visible' : 'invisible';
 
     return (
         <div className="padding-inner">

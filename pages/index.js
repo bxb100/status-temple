@@ -7,14 +7,22 @@ import BarChart from '../src/components/BarChart';
 
 export default function Home() {
     const [jsonData, setJsonData] = useState({});
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
-        const asyncFun = async () => {
-            setJsonData(await fetchData());
-        };
-        asyncFun();
-        console.log(jsonData);
-    });
+        fetchData()
+            .then((jsonData) => setJsonData(jsonData))
+            .catch((error) => {
+                console.error('error fetch data', error);
+                setError(error);
+            })
+            .finally(() => setLoading(false));
+    }, []);
+
+    if (error) {
+        return 'Error!';
+    }
 
     return (
         <div className="bg-white w-152 m-auto mb-8">
@@ -27,9 +35,8 @@ export default function Home() {
                 </div>
             </div>
             <div className=" shadow bg-gray-50">
+                <BarBox uptimeData={jsonData.uptimeData} loading={loading} />
 
-                <BarBox uptimeData = {jsonData.uptimeData} />
-                
                 <div className="bg-gray-50 pt-5 pb-5 padding-inner" style={{ borderTop: '2px solid white' }}>
                     <span className="legend-item">
                         <span className="legend-color graph-up"></span>
