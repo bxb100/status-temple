@@ -1,9 +1,7 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import fetchData from '../src/api/UptimeApi';
 import BarBox from '../src/components/BarBox';
-import BarChart from '../src/components/BarChart';
 
 export default function Home() {
     const [jsonData, setJsonData] = useState({});
@@ -25,8 +23,8 @@ export default function Home() {
     }
 
     return (
-        <div className="bg-white w-152 m-auto mb-8">
-            <div className="py-6 h-20 relative same-html">
+        <div className="w-152 m-auto mb-8">
+            <div className="py-6 h-20 relative">
                 <div className="float-left mx-4 my-2">
                     <a className="inline-block relative cursor-pointer">
                         <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
@@ -34,7 +32,7 @@ export default function Home() {
                     <span className="absolute top-7 ml-2 text-indigo-700">system status</span>
                 </div>
             </div>
-            <div className=" shadow bg-gray-50">
+            <div className="bg-white shadow bg-gray-50">
                 <BarBox uptimeData={jsonData.uptimeData} loading={loading} />
 
                 <div className="bg-gray-50 pt-5 pb-5 padding-inner" style={{ borderTop: '2px solid white' }}>
